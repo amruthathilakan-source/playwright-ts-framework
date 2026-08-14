@@ -4,8 +4,8 @@
  */
 export const testData = {
   validUser: {
-    username: process.env.TEST_USERNAME || 'testuser',
-    password: process.env.TEST_PASSWORD || 'password123',
+    username: process.env.TEST_USERNAME || '',
+    password: process.env.TEST_PASSWORD || '',
   },
   invalidUser: {
     username: 'invalid_user',

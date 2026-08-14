@@ -2,8 +2,7 @@ import { Page, Locator } from '@playwright/test';
 import { BasePage } from './BasePage';
 
 /**
- * LoginPage encapsulates all interactions with the login page.
- * Update selectors to match your application.
+ * LoginPage encapsulates all interactions with the Sauce Demo login page.
  */
 export class LoginPage extends BasePage {
   // Locators
@@ -14,14 +13,14 @@ export class LoginPage extends BasePage {
 
   constructor(page: Page) {
     super(page);
-    this.usernameInput = page.locator('#username');
-    this.passwordInput = page.locator('#password');
-    this.loginButton = page.locator('button[type="submit"]');
-    this.errorMessage = page.locator('.error-message');
+    this.usernameInput = page.locator('[data-test="username"]');
+    this.passwordInput = page.locator('[data-test="password"]');
+    this.loginButton = page.locator('[data-test="login-button"]');
+    this.errorMessage = page.locator('[data-test="errors"]');
   }
 
   async goto(): Promise<void> {
-    await this.navigate('/login');
+    await this.navigate('/');
   }
 
   async login(username: string, password: string): Promise<void> {

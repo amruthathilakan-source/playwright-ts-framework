@@ -4,7 +4,7 @@
  */
 export const env = {
   get baseUrl(): string {
-    return process.env.BASE_URL || 'https://example.com';
+    return process.env.BASE_URL || 'https://www.saucedemo.com/';
   },
 
   get isCI(): boolean {

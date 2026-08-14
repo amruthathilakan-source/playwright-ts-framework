@@ -29,11 +29,9 @@ A scalable test automation framework built with Playwright and TypeScript using 
 # Install dependencies
 npm install
 
-# Install Playwright browsers
-npx playwright install
+# Run test 
+npm run test:headed
 
-# Copy env template and configure
-cp .env.example .env
 ```
 
 ## Running Tests
